@@ -1,8 +1,8 @@
 package fr.afcepf.al28.seb.banque.business.impl;
 
-import fr.afcepf.al28.idao.IDaoCompte;
-import fr.afcepf.al28.idao.IDaoUtilisateur;
 import fr.afcepf.al28.seb.banque.business.api.IBusinessUtilisateur;
+import fr.afcepf.al28.seb.banque.data.api.IDaoCompte;
+import fr.afcepf.al28.seb.banque.data.api.IDaoUtilisateur;
 import fr.afcepf.al28.seb.banque.entity.Client;
 import fr.afcepf.al28.seb.banque.entity.Compte;
 import fr.afcepf.al28.seb.banque.entity.Credit;
