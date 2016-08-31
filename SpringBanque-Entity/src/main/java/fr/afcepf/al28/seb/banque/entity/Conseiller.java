@@ -1,10 +1,11 @@
 package fr.afcepf.al28.seb.banque.entity;
 
-import java.util.*;
+import javax.persistence.Entity;
 
 /**
  * 
  */
+@Entity
 public class Conseiller extends Utilisateur {
 
     /**
