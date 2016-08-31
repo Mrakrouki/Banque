@@ -23,7 +23,9 @@ public class Debit extends Operation {
     @ManyToOne
 	@JoinColumn(name="numero")
     private Compte compte;
-
+    
+    private Compte compteDestinataire;
+    
 	public Compte getCompte() {
 		return compte;
 	}
@@ -32,5 +34,17 @@ public class Debit extends Operation {
 		this.compte = compte;
 	}
 
-    
+    /**
+     * @return the compteDestinataire
+     */
+    public Compte getCompteDestinataire() {
+        return compteDestinataire;
+    }
+
+    /**
+     * @param paramCompteDestinataire the compteDestinataire to set
+     */
+    public void setCompteDestinataire(Compte paramCompteDestinataire) {
+        compteDestinataire = paramCompteDestinataire;
+    }
 }
