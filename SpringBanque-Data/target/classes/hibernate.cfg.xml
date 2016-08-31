@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="MaSessionFactory">
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">afcepf</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1/spring_banque</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    	<mapping class="fr.afcepf.al28.seb.banque.entity.Client"/>
+    	<mapping class="fr.afcepf.al28.seb.banque.entity.Compte"/>
+    	<mapping class="fr.afcepf.al28.seb.banque.entity.Conseiller"/>
+    	<mapping class="fr.afcepf.al28.seb.banque.entity.Debit"/>
+    	<mapping class="fr.afcepf.al28.seb.banque.entity.Credit"/>
+    	<mapping class="fr.afcepf.al28.seb.banque.entity.Operation"/>
+    	<mapping class="fr.afcepf.al28.seb.banque.entity.Utilisateur"/>
+    </session-factory>
+</hibernate-configuration>
