@@ -3,6 +3,7 @@ package fr.afcepf.al28.seb.banque.entity;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  * 
@@ -21,9 +22,11 @@ public class Debit extends Operation {
      * 
      */
     @ManyToOne
-	@JoinColumn(name="numero")
+	@JoinColumn(name="numero", insertable=false, updatable=false)
     private Compte compte;
     
+    @ManyToOne
+    @JoinColumn(name="numero", insertable=false, updatable=false)
     private Compte compteDestinataire;
     
 	public Compte getCompte() {
