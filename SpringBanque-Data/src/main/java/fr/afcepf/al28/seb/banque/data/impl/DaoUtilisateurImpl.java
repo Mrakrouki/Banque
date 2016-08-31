@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import fr.afcepf.al28.seb.banque.data.api.IDaoUtilisateur;
+import fr.afcepf.al28.seb.banque.entity.Client;
+import fr.afcepf.al28.seb.banque.entity.Compte;
 import fr.afcepf.al28.seb.banque.entity.Utilisateur;
 @Service
 @Transactional
@@ -31,5 +33,12 @@ public class DaoUtilisateurImpl implements IDaoUtilisateur{
     public Utilisateur updateUtilisateur(Utilisateur paramUtilisateur) {
         sf.getCurrentSession().update(paramUtilisateur);
         return paramUtilisateur;
+    }
+    @Override
+    public Utilisateur addCompte(Utilisateur paramUtilisateur,
+            Compte paramCompte) {
+        paramCompte.setClient((Client)paramUtilisateur);
+        sf.getCurrentSession().save(paramCompte);
+        return null;
     }
 }

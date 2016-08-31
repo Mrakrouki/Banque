@@ -23,7 +23,7 @@ public class DaoCompteImpl implements IDaoCompte{
     @Override
     public List<Compte> getListeComptes(Client paramClient) {
         List<Compte> listeComptes = null;
-        String reqSQL = "SELECT distinct (c) FROM Client c WHERE c.id = :paramClientId ";
+        String reqSQL = "SELECT distinct (c) FROM Compte c LEFT JOIN FETCH c.client WHERE c.client.id = :paramClientId ";
         Query query = sf.getCurrentSession().createQuery(reqSQL);
         query.setParameter("paramClientId", paramClient.getId());
         listeComptes= query.list();
