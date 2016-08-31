@@ -1,4 +1,4 @@
-package fr.afcepf.al28.idao;
+package fr.afcepf.al28.seb.banque.data.api;
 
 import fr.afcepf.al28.seb.banque.entity.Utilisateur;
 
